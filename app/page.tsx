@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const dynamic = 'force-dynamic';
 
 export default function AboutMe() {
@@ -11,8 +13,15 @@ export default function AboutMe() {
     <div className="min-h-screen bg-gray-950 text-gray-100 flex items-center justify-center p-6">
       <div className="max-w-md w-full rounded-2xl border border-gray-800 bg-gray-900 p-8 shadow-2xl text-center space-y-6">
         <div className="flex justify-center">
-          <div className="h-28 w-28 rounded-full bg-gradient-to-br from-gray-700 to-gray-600 flex items-center justify-center text-3xl font-semibold text-gray-300">
-            KK
+          <div className="h-28 w-28 rounded-full overflow-hidden border border-gray-700">
+            <Image
+              src="/images/Photo.jpeg"
+              alt="Konstantine Konstantinov"
+              width={112}
+              height={112}
+              priority
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
 
